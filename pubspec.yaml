@@ -32,6 +32,11 @@ dependencies:
     sdk: flutter
 
 
+  bloc: ^8.0.0 # Ensure this version matches your project's requirements
+  equatable: ^2.0.0 # Ensure this version matches your project's requirements
+  flutter_bloc: ^8.0.0 # Adjust the version as necessary
+  shared_preferences: ^2.0.0 # Adjust the version as necessary
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
