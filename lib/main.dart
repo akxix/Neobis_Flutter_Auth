@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'home_screen.dart';
 import './screens/auth/welcome_screen.dart';
 import './blocs/authentication_bloc/authentication_bloc.dart';
@@ -30,6 +29,18 @@ class MyApp extends StatelessWidget {
         create: (context) => AuthenticationBloc(userRepository: userRepository),
         child: MaterialApp(
           title: 'SharedPreferences Auth',
+          theme: ThemeData(
+            colorScheme: const ColorScheme.light(
+                background: Colors.white,
+                onBackground: Colors.black,
+                primary: Color.fromRGBO(98, 179, 252, 1.0),
+                onPrimary: Colors.black,
+                secondary: Color.fromRGBO(38, 69, 248, 1),
+                onSecondary: Colors.white,
+                tertiary: Color.fromRGBO(64, 255, 255, 1.0),
+                error: Color.fromARGB(255, 157, 106, 215),
+                outline: Color(0xFF424242)),
+          ),
           home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
             builder: (context, state) {
               if (state.status == AuthenticationStatus.authenticated) {
